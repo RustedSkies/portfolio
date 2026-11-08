@@ -1,9 +1,7 @@
 ---
-import background from '../assets/background.svg';
 ---
 
 <div id="container">
-	<img id="background" src={background.src} alt="" fetchpriority="high" />
 	<main>
 		<nav class="navbar">
 			<div class="nav-left">
@@ -23,7 +21,7 @@ import background from '../assets/background.svg';
 			<h1>Marcus Knight</h1>
 			<h2>ECE Student, CS Minor</h2>
 
-			<p>Description about myself... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent arcu sem, tincidunt eu molestie vel, rhoncus quis nisl. Pellentesque sed placerat lacus.</p>
+			<p class="dull">Description about myself... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent arcu sem, tincidunt eu molestie vel, rhoncus quis nisl. Pellentesque sed placerat lacus.</p>
 
 			<div id="links">
 				<a href="#">GitHub</a>
@@ -34,51 +32,33 @@ import background from '../assets/background.svg';
 
 		<section id="projects">
 			<h1>Projects</h1>
-			<p>Game engine, block stacking</p>
+			<p class="dull">Game engine, block stacking</p>
 		</section>
 
 		<section id="experience">
 			<h1>Experience</h1>
-			<p>cornerstone</p>
+			<p class="dull">cornerstone</p>
 		</section>
 
 		<section id="skills">
 			<h1>Skills</h1>
-			<p>group by system level: low-level, hardware, software</p>
+			<p class="dull">group by system level: low-level, hardware, software</p>
 		</section>
 
 		<section id="contact">
 			<h1>Contact</h1>
-			<p>email, github, linkedin, resume</p>
+			<p class="dull">email, github, linkedin, resume</p>
 		</section>
 
-		<ul>
-			<li>Hero Section</li>
-			<li>Game Engine Showcase</li>
-			<li>Block stacking game showcase</li>
-			<li>Real-world experience</li>
-			<li>Skills and tech stack</li>
-			<li>Contact</li>
-			<li>footer</li>
-		</ul>
-
-		<p>Use monospace style, dark mode, terminal-esque. Circuit traces, perhaps with moving dots to look like current</p>
-		<p>grid background</p>
+		<p class="dull">Use monospace style, dark mode, terminal-esque. Circuit traces, perhaps with moving dots to look like current</p>
+		<p class="dull">grid background</p>
 	</main>
 </div>
 
 <style>
-	#background {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: -1;
-		filter: blur(100px);
-	}
-
 	#container {
+		background-color: #060606;
+		color: #efefef;
 		font-family:
 			'JetBrains Mono', ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono',
 			monospace;
@@ -149,6 +129,7 @@ import background from '../assets/background.svg';
 	h1 {
 		font-size: 22px;
 		margin-top: 0.25em;
+		color: #fff;
 	}
 
 	#links {
@@ -160,37 +141,30 @@ import background from '../assets/background.svg';
 		display: flex;
 		align-items: center;
 		padding: 10px 12px;
-		color: #111827;
+		color: #cccccc;
 		text-decoration: none;
 		transition: color 0.2s;
 	}
 
 	#links a:hover {
-		color: rgb(78, 80, 86);
+		color: #fff;
+		text-decoration: underline;
 	}
 
 	h2 {
 		margin: 0 0 1em;
 		font-weight: normal;
-		color: #111827;
 		font-size: 20px;
 	}
 
 	p {
-		color: #4b5563;
 		font-size: 16px;
 		line-height: 24px;
 		letter-spacing: -0.006em;
 		margin: 0;
 	}
 
-	code {
-		display: inline-block;
-		background:
-			linear-gradient(66.77deg, #f3cddd 0%, #f5cee7 100%) padding-box,
-			linear-gradient(155deg, #d83333 0%, #f041ff 18%, #f5cee7 45%) border-box;
-		border-radius: 8px;
-		border: 1px solid transparent;
-		padding: 6px 8px;
+	.dull {
+		color: #777;
 	}
 </style>
